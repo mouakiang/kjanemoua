@@ -4,18 +4,17 @@ import { cinzel } from '../font/fonts';
 
 export default function TopNav() {
     return (
-        <main>
-            <div className="flex justify-center items-center">
+        <main className="text-white">
+            <div className="flex justify-end px-4 hidden sm:block">
                 <Image
                     src="/photography.png"
                     width={350}
                     height={350}
                     alt="Logo of Kjane Moua Photography"
+                    className="hidden md:block"
                 />
             </div>
-
-            <div className="my-4 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-550 to-transparent opacity-50 dark:via-neutral-950"></div>
-            <div className="flex justify-evenly pt-4 md:pt-6 md:px-40 lg:pt-8 lg:px-80">
+            <div className="flex justify-center space-x-12 pt-14 md:pt-6 md:space-x-32 lg:pt-8 lg:space-x-48">
                 <Link href="/about" className={`${cinzel.className}`}>
                     About
                 </Link>
