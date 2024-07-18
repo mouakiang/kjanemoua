@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { cinzel } from '../font/fonts';
 import HoverableLink from '../hoverablelink';
 
@@ -18,7 +17,7 @@ export default function TopNav({ onClick }: any) {
             <div className="flex justify-center pt-14 md:pt-6 lg:pt-8">
                 <button
                     onClick={onClick}
-                    className="flex space-x-12 md:space-x-32 lg:space-x-48"
+                    className="flex space-x-12 text-sm md:space-x-32 md:text-xl lg:space-x-48 lg:text-2xl"
                 >
                     <HoverableLink
                         href="/about"
