@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { cinzel } from '../font/fonts';
+import HoverableLink from '../hoverablelink';
 
-export default function TopNav() {
+export default function TopNav({ onClick }: any) {
     return (
         <main className="text-white">
             <div className="flex justify-end px-4 hidden sm:block">
@@ -14,16 +15,30 @@ export default function TopNav() {
                     className="hidden md:block"
                 />
             </div>
-            <div className="flex justify-center space-x-12 pt-14 md:pt-6 md:space-x-32 lg:pt-8 lg:space-x-48">
-                <Link href="/about" className={`${cinzel.className}`}>
-                    About
-                </Link>
-                <Link href="/gallery" className={`${cinzel.className}`}>
-                    Gallery
-                </Link>
-                <Link href="/contact" className={`${cinzel.className}`}>
-                    Contact
-                </Link>
+            <div className="flex justify-center pt-14 md:pt-6 lg:pt-8">
+                <button
+                    onClick={onClick}
+                    className="flex space-x-12 md:space-x-32 lg:space-x-48"
+                >
+                    <HoverableLink
+                        href="/about"
+                        className={`${cinzel.className}`}
+                    >
+                        About
+                    </HoverableLink>
+                    <HoverableLink
+                        href="/gallery"
+                        className={`${cinzel.className}`}
+                    >
+                        Gallery
+                    </HoverableLink>
+                    <HoverableLink
+                        href="/contact"
+                        className={`${cinzel.className}`}
+                    >
+                        Contact
+                    </HoverableLink>
+                </button>
             </div>
         </main>
     );
