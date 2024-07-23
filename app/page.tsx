@@ -1,21 +1,30 @@
 import Image from 'next/image';
 import TopNav from './components/topnav/index';
+import { CarouselSpacing } from './components/carousel';
+import Logo from './components/logo';
 
 export default function Home() {
     return (
         <main>
-            <div className="relative z-10">
-                <TopNav />
+            <div className="relative flex flex-col items-center">
+                <div className="">
+                    <Logo />
+                </div>
+                <div className="absolute z-20 flex justify-center pt-20">
+                    <TopNav />
+                </div>
+                <div className="relative w-full h-screen">
+                    <Image
+                        src="/HomePhoto.jpg"
+                        layout="fill"
+                        objectFit="cover"
+                        alt="Girl at the yellow mustard fields"
+                        className="opacity-80"
+                    />
+                </div>
             </div>
-
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/HomePhoto.jpg"
-                    layout="fill"
-                    objectFit="cover"
-                    alt="Girl at the yellow mustard fields"
-                    className="opacity-80"
-                />
+            <div className="flex justify-center">
+                <CarouselSpacing />
             </div>
         </main>
     );
