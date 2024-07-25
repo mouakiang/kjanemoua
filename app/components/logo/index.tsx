@@ -1,8 +1,9 @@
 import Image from 'next/image';
+
 export default function Logo() {
     return (
         <main>
-            <div className="flex justify-end px-4 hidden sm:block pb-2 ">
+            <div className="fixed top-0 left-0 right-0 bg-white z-50 flex items-center justify-center h-16 pb-4">
                 <Image
                     src="/photography.png"
                     width={350}
