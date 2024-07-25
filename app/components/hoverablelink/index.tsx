@@ -10,7 +10,7 @@ export default function HoverableLink({ href, className, children }: any) {
         <motion.div
             onHoverStart={() => setIsHovered(true)}
             onHoverEnd={() => setIsHovered(false)}
-            animate={{ scale: isHovered ? 1.1 : 1 }}
+            animate={{ scale: isHovered ? 1.05 : 1 }}
         >
             <Link href={href} className={className}>
                 {children}
