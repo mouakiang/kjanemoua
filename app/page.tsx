@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import TopNav from './components/topnav/index';
-import { CarouselSpacing } from './components/carousel';
+import ImageSlider from './components/imageslider';
 import Logo from './components/logo';
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <CarouselSpacing />
+                <ImageSlider />
             </div>
         </main>
     );
