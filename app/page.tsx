@@ -2,6 +2,7 @@ import Image from 'next/image';
 import TopNav from './components/topnav/index';
 import ImageSlider from './components/imageslider';
 import Logo from './components/logo';
+import Footer from './components/footer';
 
 export default function Home() {
     return (
@@ -25,6 +26,9 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
                 <ImageSlider />
+            </div>
+            <div>
+                <Footer />
             </div>
         </main>
     );
