@@ -34,7 +34,7 @@ export default function ImageSlider() {
             if (slider.current) {
                 slider.current.next();
             }
-        }, 10000);
+        }, 3000);
 
         return () => {
             if (sliderRef.current) {
