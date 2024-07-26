@@ -3,10 +3,11 @@ import * as React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export default function ImageSlider() {
     const [slidesPerView, setSlidesPerView] = useState(4);
+    const sliderRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         setSlidesPerView(window.innerWidth <= 768 ? 2 : 4);
@@ -21,11 +22,27 @@ export default function ImageSlider() {
         };
     }, []);
 
-    const [ref] = useKeenSlider<HTMLDivElement>({
+    const [ref, slider] = useKeenSlider<HTMLDivElement>({
         slides: {
             perView: slidesPerView,
         },
+        loop: true,
     });
+
+    useEffect(() => {
+        sliderRef.current = setInterval(() => {
+            if (slider.current) {
+                slider.current.next();
+            }
+        }, 10000);
+
+        return () => {
+            if (sliderRef.current) {
+                clearInterval(sliderRef.current);
+            }
+        };
+    }, [slider]);
+
     return (
         <div ref={ref} className="keen-slider">
             {Array.from({ length: 15 }).map((_, index) => (
