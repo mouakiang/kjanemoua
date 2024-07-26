@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function ImageSlider() {
-    const [slidesPerView, setSlidesPerView] = useState(
-        window.innerWidth <= 768 ? 3 : 4
-    );
+    const [slidesPerView, setSlidesPerView] = useState(4);
 
     useEffect(() => {
+        setSlidesPerView(window.innerWidth <= 768 ? 3 : 4);
+
         const handleResize = () => {
             setSlidesPerView(window.innerWidth <= 768 ? 3 : 4);
         };
