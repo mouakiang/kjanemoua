@@ -9,10 +9,10 @@ export default function ImageSlider() {
     const [slidesPerView, setSlidesPerView] = useState(4);
 
     useEffect(() => {
-        setSlidesPerView(window.innerWidth <= 768 ? 3 : 4);
+        setSlidesPerView(window.innerWidth <= 768 ? 2 : 4);
 
         const handleResize = () => {
-            setSlidesPerView(window.innerWidth <= 768 ? 3 : 4);
+            setSlidesPerView(window.innerWidth <= 768 ? 2 : 4);
         };
 
         window.addEventListener('resize', handleResize);
