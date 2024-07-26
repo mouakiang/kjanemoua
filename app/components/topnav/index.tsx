@@ -5,7 +5,7 @@ import HoverableLink from '../hoverablelink';
 export default function TopNav({ onClick }: any) {
     return (
         <main className="text-white">
-            <div className="flex justify-center pt-14 md:pt-6 lg:pt-8">
+            <div className="flex justify-center pt-6 md:pt-12 lg:pt-16">
                 <button
                     onClick={onClick}
                     className="flex space-x-12 text-sm md:space-x-32 md:text-xl lg:space-x-48 lg:text-2xl"

@@ -3,11 +3,27 @@ import * as React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 export default function ImageSlider() {
+    const [slidesPerView, setSlidesPerView] = useState(
+        window.innerWidth <= 768 ? 3 : 4
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setSlidesPerView(window.innerWidth <= 768 ? 3 : 4);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     const [ref] = useKeenSlider<HTMLDivElement>({
         slides: {
-            perView: 4,
+            perView: slidesPerView,
         },
     });
     return (
