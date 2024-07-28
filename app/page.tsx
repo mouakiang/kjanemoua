@@ -24,6 +24,7 @@ export default function Home() {
                     />
                 </div>
             </div>
+            <div className="w-full h-px bg-black"></div>
             <div className="flex justify-center">
                 <ImageSlider />
             </div>
