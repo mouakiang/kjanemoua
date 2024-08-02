@@ -1,0 +1,26 @@
+[
+    {
+        "img": "/galleryimages/images1.jpg",
+        "title": "Lifestyle"
+    },
+    {
+        "img": "/galleryimages/images2.jpg",
+        "title": "Weddings"
+    },
+    {
+        "img": "/galleryimages/images3.jpg",
+        "title": "Portraits"
+    },
+    {
+        "img": "/galleryimages/images4.jpg",
+        "title": "Family Portraits"
+    },
+    {
+        "img": "/galleryimages/images5.jpg",
+        "title": "Prom"
+    },
+    {
+        "img": "/galleryimages/images6.jpg",
+        "title": "Graduation"
+    }
+]
