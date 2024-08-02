@@ -1,16 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Logo() {
     return (
         <main>
             <div className="fixed top-0 left-0 right-0 bg-white z-50 flex items-center justify-center h-10 md:h-16 pb-4">
-                <Image
-                    src="/photography.png"
-                    width={350}
-                    height={350}
-                    alt="Logo of Kjane Moua Photography"
-                    className="sm:block sm:"
-                />
+                <Link href="/" passHref>
+                    <Image
+                        src="/photography.png"
+                        width={350}
+                        height={350}
+                        alt="Logo of Kjane Moua Photography"
+                        className="sm:block sm:"
+                    />
+                </Link>
             </div>
         </main>
     );
